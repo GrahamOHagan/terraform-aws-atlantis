@@ -269,6 +269,12 @@ variable "ecs_service_deployment_minimum_healthy_percent" {
   default     = 50
 }
 
+variable "ecs_service_platform_version" {
+  description = "The platform version on which to run the Fargate service. Defaults to LATEST (which uses the 1.3.0 platform version)."
+  type = string
+  default = "LATEST"
+}
+
 variable "ecs_task_cpu" {
   description = "The number of cpu units used by the task"
   type        = number

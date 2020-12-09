@@ -234,6 +234,7 @@ allow_github_webhooks        = true
 | ecs\_service\_deployment\_maximum\_percent | The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment | `number` | `200` | no |
 | ecs\_service\_deployment\_minimum\_healthy\_percent | The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment | `number` | `50` | no |
 | ecs\_service\_desired\_count | The number of instances of the task definition to place and keep running | `number` | `1` | no |
+| ecs\_service\_platform\_version | The platform version on which to run the Fargate service | `string` | `LATEST` | no |
 | ecs\_task\_cpu | The number of cpu units used by the task | `number` | `256` | no |
 | ecs\_task\_memory | The amount (in MiB) of memory used by the task | `number` | `512` | no |
 | entrypoint | The entry point that is passed to the container | `list(string)` | `null` | no |
@@ -297,4 +298,3 @@ Module is created and maintained by [Anton Babenko](https://github.com/antonbabe
 ## License
 
 Apache 2 Licensed. See LICENSE for full details.
-
