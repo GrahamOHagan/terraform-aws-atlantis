@@ -585,7 +585,7 @@ resource "aws_ecs_service" "atlantis" {
   launch_type                        = var.ecs_fargate_spot ? null : "FARGATE"
   deployment_maximum_percent         = var.ecs_service_deployment_maximum_percent
   deployment_minimum_healthy_percent = var.ecs_service_deployment_minimum_healthy_percent
-  platform_version                   = var.ecs_service_platform_version
+  platform_version                   = var.ecs_fargate_spot ? null : var.ecs_service_platform_version
 
   network_configuration {
     subnets          = local.private_subnet_ids
